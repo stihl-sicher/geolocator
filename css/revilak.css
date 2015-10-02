@@ -1,0 +1,425 @@
+@import "../dojo/dojox/image/resources/Lightbox.css";
+
+.mobile body, .dijitDialog {
+	font-size:1em !important;
+	color:#000000;
+}
+
+
+#head {
+	background-color:#FFFFFF;
+}
+
+#banner {
+	background-color:#ffffff;
+}
+
+#wrapper {
+	display:flex; 
+	display:-webkit-flex;
+	position:absolute; top:0px; bottom:0px; left:0px; right:0px; margin:0px; padding:0px;
+}
+
+body {
+	font-family:helvetica,sans-serif;
+}
+
+
+#kategorien ul {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+#kategorien ul li label, #kategorien ul li img {
+	cursor: pointer;
+}
+
+#suche img, #messWerkzeug input, .zoomButton, #kartenAuswahl button{
+	cursor:pointer;
+}
+
+
+#kategorien ul li {
+	padding:5px;
+	border-bottom: 1px solid #cecece;
+	font-size:1em;
+}
+
+#kategorien ul li.dog {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+
+	-webkit-box-orient: inline-axis;
+	-moz-box-orient: inline-axis;
+	box-orient: inline-axis;
+
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	box-pack: justify;
+
+	display:-webkit-flex;
+	display:flex;
+	-webkit-flex-flow: row;
+	flex-flow:row;
+	-webkit-align-items:center;
+	align-items:center;
+}
+
+#kategorien ul li.back {
+	padding-top:10px;
+	padding-bottom:5px;
+	padding-right:20px;
+	background-color:#efefef;
+	font-weight:bold;
+}
+
+#kategorien ul li.cat {
+/*	padding-top:20px;
+	padding-bottom:20px;
+	padding-right:20px; */
+	vertical-align:center;
+	background: #ffffff url("../framework/arr_right.png") no-repeat calc(100% - 10px) center;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-flex-flow: row;
+	flex-flow:row;
+	-webkit-align-items:center;
+	align-items:center;
+}
+
+#kategorien ul li.cat img.catEye{
+	vertical-align:middle;
+	margin-right:10px;
+	flex-shrink:0;
+	width:20px;
+	height:9px;
+	-webkit-order:0;
+	order:0;
+	padding: 20px 20px 20px 0px;
+}
+
+#kategorien ul li.dog img.itemPic{
+	vertical-align:middle;
+	margin-right:5px;
+	-webkit-box-flex:0;
+	box-flex:0;
+	-webkit-flex-shrink:0;
+	flex-shrink:0;
+	width:65px;
+	height:48px;
+	background-color:#ffffff;
+	-webkit-order:0;
+	order:0;
+}
+
+#kategorien ul li.cat label {
+	-webkit-flex-grow:1;
+	flex-grow:1;
+	display:inline-block;
+	flex-basis:auto;
+	padding: 20px 20px 20px 0px;
+}
+
+#kategorien ul li.dog label {
+	-webkit-box-flex:1;
+	box-flex:1;
+	-webkit-flex-grow:1;
+	flex-grow:1;
+	display:inline-block;
+	flex-basis:auto;
+	padding: 20px 0px 20px 0px;
+}
+
+
+#kategorien ul li.dog div {
+	width: 40px;
+	-webkit-box-flex:0;
+	box-flex:0;
+	-webkit-flex-shrink:0;
+	flex-shrink:0;
+	flex-grow:0;
+	margin-left:5px;
+}
+
+#kategorien ul li.dog div img {
+	padding:10px;
+}
+
+#suche input {
+border: 0 none;
+height: 20px;
+margin: 3px 5px;
+width: 275px;
+-webkit-appearance: none;
+border-radius: 0;
+}
+
+#suche img {
+	vertical-align:middle;
+}
+
+img.backArr {
+	vertical-align:middle;
+	margin-right:12px;
+}
+ /*
+#btn_printer2 {
+	position: absolute;
+    right: 60px;
+	top: 4px;
+    width: 20px;
+}*/
+
+.dijitDialogUnderlayWrapper {
+	display:none;
+}
+
+.dijitDialogUnderlay {
+    opacity:0.75 !important;
+    background-color:rgb(80,80,80) !important;
+}
+
+.mblCarouselSlotSelected .mblCarouselItemImage {
+    box-shadow: none;
+    opacity: 1.0 !important;
+}
+
+.mblCarouselItemImage {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65) !important;
+  vertical-align: bottom;
+}
+
+
+.mblPageIndicatorDot {
+  border-radius: 0px !important;
+}
+
+
+
+
+.dijitReset.dijitInline.dijitButtonNode {
+	border:0px !important;
+	border-radius:0px !important;
+}
+
+.claro .dijitDialogCloseIcon {
+  background: rgba(0, 0, 0, 0) url("../framework/WindowControl_mobil.png") no-repeat scroll -35px -5px !important;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  width: 20px;
+}
+
+#dojoxLightboxDialog img, .dojoxLightboxImage {
+    position: absolute;
+    top: 0px;
+    bottom: 30px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+}
+
+.dojoxLightboxText {
+	line-height:30px;
+}
+
+#messWerkzeug > input {
+  background:none;
+  background-image: url("../framework/messwerkzeuge_Desktop.png");
+  background-repeat:no-repeat;
+  border: 0 none;
+  height: 40px;
+  margin-left: 5px;
+  margin-top: 10px;
+  width: 40px;
+}
+
+#tfMWResult {
+	background: none !important;
+	width:100px !important;
+	text-align:right;
+	display: inline-block;
+}
+
+#messWerkzeug > input#btnMWClose {
+	background-image: url("../framework/arrows.png") !important;
+	background-position:-60px 0px !important;
+	width: 14px !important;
+	height:14px !important;
+	margin-top:22px;
+	margin-right:10px;
+	float:right;
+}
+
+#messWerkzeug > input:hover, #messWerkzeug > input.aktiv {
+	background-color:rgb(0,158,111);
+} 
+
+#messWerkzeug > input#btnMWClose:hover {
+	background-color:#fff;
+}
+
+#btnMWStrecke {
+	background-position: 0px -82px !important;
+}
+
+#btnMWArea {
+	background-position: 0px -41px !important;
+}
+
+#btnMWReset {
+	background-position: 0px 0px !important;
+}
+
+#btnMWCircle {
+	background-position: 0px -123px !important;
+}
+
+#btnMWStrecke:hover, #btnMWStrecke.aktiv {
+	background-position: -41px -82px !important;
+}
+
+#btnMWArea:hover, #btnMWArea.aktiv {
+	background-position: -41px -41px !important;
+}
+
+#btnMWReset:hover, #btnMWReset.aktiv {
+	background-position: -41px 0px !important;
+}
+
+#btnMWCircle:hover , #btnMWCircle.aktiv{
+	background-position: -41px -123px !important;
+}
+
+
+.claro .dojoxLightbox, .soria .dojoxLightbox, .nihilo .dojoxLightbox, .tundra .dojoxLightbox {
+	border-radius:0px !important;
+}
+
+.timetable {
+  font-size: 9pt;
+  text-align: center;
+}
+
+.timetable th {
+  border: 5px solid #ffffff;
+  color: #ffffff;
+  font-size: 10pt;
+  font-weight: normal;
+  height: 30px;
+  margin: 10px;
+  width: 30px;
+}
+
+.timeOpen {
+  background-color: rgb(0, 158, 111);
+}
+
+.timeClose {
+  background-color: #ff0000;
+}
+
+.timeEntryClosed {
+  background: rgba(0, 0, 0, 0) url("../framework/arrows.png") no-repeat scroll -60px 0;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+}
+
+.rapidInfo {
+  float: right;
+  font-size: 9pt;
+  font-weight: normal;
+  line-height: 10pt;
+  margin-right: 10px;
+  text-align: left;
+}
+
+#favButtonInfo {
+  background: rgba(0, 0, 0, 0) url("../framework/fav_off.png") no-repeat scroll center center;
+  border: 0 none;
+  height: 19px;
+  width: 20px;
+  padding:0px;
+  margin:0px;
+}
+
+#favButtonInfo:hover {
+  background-image: url("../framework/fav_on.png");
+}
+
+.mapButton {
+	color: rgba(255,255,255,0) !important;
+}
+
+.mapButton.aktiv, .mapButton.selected {
+	border:2px solid #ffffff !important;
+	box-sizing:border-box;
+}
+
+.mapButton.selected {
+	border:2px solid rgb(0,158,111) !important;
+	box-sizing:border-box;
+}
+
+
+#map1Button {
+	background:none;
+	background-image: url("../framework/maps/OSM.png");
+	background-repeat:no-repeat;
+}
+
+#map2Button {
+	background:none;
+	background-image: url("../framework/maps/Satellit.png");
+	background-repeat:no-repeat;
+}
+
+#map3Button {
+	background:none;
+	background-image: url("../framework/maps/Bender.png");
+	background-repeat:no-repeat;
+}
+
+#mapprintdiv {
+	display:none;
+}
+
+
+/*TOOLTIP */
+
+.claro .dijitTooltipBelow .dijitTooltipConnector {
+  background: rgba(0, 0, 0, 0) url("../framework/triangle_up.png") no-repeat scroll 0 0 !important;
+  height: 16px !important;
+  left: 5px !important;
+  width: 32px !important;
+}
+
+.claro .dijitTooltipLeft .dijitTooltipConnector {
+  background: rgba(0, 0, 0, 0) url("../framework/triangle_right.png") no-repeat scroll 0 0 !important;
+  height: 32px !important;
+  top: 5px !important;
+  width: 16px !important;
+}
+
+.dijitTooltipBelow {
+  padding-top: 16px !important;
+}
+
+.claro .dijitTooltipLeft .dijitTooltipContainer {
+  min-height: 40px;
+}
+
+.claro .dijitTooltipContainer {
+  background:none;
+  background-color: #ffffff;
+  border: 2px solid rgb(0, 158, 111);
+  border-radius: 0 !important;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.65);
+  color: #000000;
+  font-size: 1em;
+  padding: 6px 8px;
+}

@@ -1,0 +1,177 @@
+body, #wrapper, .mblBackground {
+	background-color:#ffffff !important;
+}
+
+.mobile body {
+	color:#000000 !important;	
+}
+
+#wrapper {
+	width:17cm;
+	text-align:center;
+	display: flex;
+	display:-webkit-flex;
+	flex-flow:column;
+	-webkit-flex-flow:column;
+	-webkit-align-items: center;
+   align-items: center;
+}
+
+
+#tools, #mobileHead, #banner, #navigation, #routing, #infoFav {
+	display:none;
+}
+
+
+.mblCarouselHeaderBar, .zoomButton, #openCloseAllInfoImg, #informationenControl, #routingControl  {
+	display:none;
+}
+
+#infoFenster, #routingFenster {
+	display:none;
+}
+
+.infoImgGal {
+	height: 260px;
+	display:flex;
+	flex-flow: row nowrap;
+}
+
+.mblView.mblSwapView {
+	display:inline-block !important;
+}
+
+.mblCarouselItemImage {
+	height:250px;
+}
+
+#informationen h1 {
+ order:0;
+}
+
+#infoTitleDiv span {
+	font-weight:bold;
+	font-size:1.5em;
+	text-align:center;
+}
+
+#wappen {
+	position:relative;
+	left:0cm;
+	right:0cm;
+	top:0cm;
+	width:100%;
+	text-align:center;
+	height:2cm;
+	flex-grow:1;
+}
+
+#wappen img {
+	height:1.8cm;
+	width:auto;
+	background-color:#00ff00;
+}
+
+#maparea {
+	display:inline-block;
+	position:relative;
+	left:auto;
+	right:auto;
+	height:15cm;
+	width:17cm;
+	flex-grow:1;
+}
+
+#infoFenster, #routingFenster {
+	display:none;
+	color:#000000;
+	width:17cm;
+}
+
+#btn_printer2 {
+	display: none;
+}
+
+#routingFenster, #infoFenster {
+	page-break-before:always;
+	font-size: 0.9em;
+	flex-flow: column;
+	-webkit-flex-flow: column;
+	flex-direction: column;
+	-webkit-flex-direction: column; 
+	overflow:visivble;
+	position: relative !important;
+}
+
+#head {
+	flex-grow:0;
+	-webkit-flex-grow:0;
+}
+
+#aktion ul {
+	display:none;
+}
+
+#infoMap {
+	display:none;
+}
+
+#maparea .olControlOverviewMap {
+	display:none;
+}
+
+
+#information {
+	order:0;
+	-webkit-order:0;
+}
+
+#aktion {
+	order:1;
+	-webkit-order:1;
+	position:relative;
+}
+#informationenContent {
+	order:2;
+	-webkit-order:2:
+	overflow:visible;
+	display:block !important;
+	flex-shrink:0;
+}
+
+.claro .dijitTitlePaneTitleOpen, .claro .dijitTitlePaneTitleFixedOpen {
+	background:none;
+	font-weight:bold;
+	border:0px;
+}
+
+.claro .dijitTitlePaneContentOuter {
+	border:0px;
+	background:none;
+}
+
+#aktion .dijitTitlePaneTextNode {
+	background-image:url("../framework/tabIcons.png");
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
+#Aktionen .dijitTitlePaneTextNode {
+	background-position: -21px 0px;
+}
+
+#Termin .dijitTitlePaneTextNode {
+	background-position: -21px -42px;
+}
+
+#Stellenangebot .dijitTitlePaneTextNode {
+	background-position: -21px -21px;
+}
+
+#infoFenster, #routingFenster {
+	color:#000 !important;
+}
+
+#routingMinFenster {
+	display:none;
+	}

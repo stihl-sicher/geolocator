@@ -1,0 +1,200 @@
+.infobubbleContent {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 7px;  /*4 */
+}
+.even {
+    background-color: #009b72;
+}
+.odd {
+    background-color: #33af8e;
+}
+
+.infobubbleDatingmessage {
+	background-color: #ffffff;
+	color: #000000;
+	padding: 5px;
+}
+
+/* Routing */
+.routingRow {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: calc(100% - 50px);
+	position: relative;
+}
+
+.routingTextfield {
+	position: relative;
+	left: 5px;
+	width: calc(100% - 20px);
+}
+
+#routingInputAreaDiv {
+    padding: 5px;
+}
+#routingOutputAreaDiv {
+    margin: 2px;
+}
+#routingContentDiv {
+    max-height: 400px;
+    overflow: auto;
+}
+#routingHeaderDiv {
+    height: 150px;
+    margin: 15px 0 0;
+}
+#routingMapDiv {
+    background-color: #efefef;
+    float: left;
+    height: 192px;
+    margin-right: 10px;
+    width: 100%;
+}
+#routingDescrDiv {
+    font-size: 11px;
+    padding: 10px;
+}
+
+.routingIcon.aktiv, .routingIcon:hover {
+    border-bottom: 2px solid rgb(0, 158, 111);
+}
+.routingIcon {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-color: -moz-use-text-color -moz-use-text-color #ffffff;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 2px;
+    background-image:url("../framework/routing.png");
+    background-repeat:no-repeat;
+    height: 30px;
+    width: 40px;
+}
+
+.routingCar {
+	background-position: 0px 0px;
+}
+
+.routingWalk {
+	background-position: 0px -93px;
+}
+
+.routingBike {
+	background-position: 0px -62px;
+}
+
+.routingBus {
+	background-position: 0px -31px;
+}
+
+.routingCar.aktiv {
+	background-position: -41px 0px;
+}
+
+.routingWalk.aktiv {
+	background-position: -41px -93px;
+}
+
+.routingBike.aktiv {
+	background-position: -41px -62px;
+}
+
+.routingBus.aktiv {
+	background-position: -41px -31px;
+}
+
+.olControlOverviewMapMinimizeButton, .olControlOverviewMapMaximizeButton {
+    right: -1px;
+}
+
+/* Dialog */
+.nonModal_underlay {
+    display:none
+}
+
+
+.dijitDialogTitleBar {
+	background-image: none !important;
+	background-color: #009b72 !important;
+	border-style: none !important;
+	width:100% !important;
+	box-sizing:border-box;
+}
+
+.claro .dijitDialogPaneContent  {
+	border-style: none !important;
+	width: calc(100% - 16px) !important;
+}
+
+.dijitDialog {
+	left: 339px !important;
+    top: 93px !important;
+	box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.65) !important;
+}
+
+.claro .dijitDialogTitle {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.claro .dijitDialog {
+	font-size: 12px;
+}
+
+#noDatingCoordsSpan {
+	color: #ff0000;
+	display: none;
+	position: relative;
+	top: 5px;
+}
+
+/* Buttons */
+.claro .dijitButton .dijitButtonNode, .claro .dijitDropDownButton .dijitButtonNode, .claro .dijitComboButton .dijitButtonNode, .claro .dijitToggleButton .dijitButtonNode  {
+	background-image: none !important;
+	background-color: #009b72 !important;
+	color: #ffffff !important;
+}
+
+.olImageLoadError { 
+    /* when OL encounters a 404, don't display the pink image */
+    display: none !important;
+}
+
+.olControlOverviewMapExtentRectangle {
+	z-Index: 10001 !important;
+}
+
+
+/* Suche */
+/* #searchImg {
+	position:relative;
+	left:5px;
+	top: -1px;
+}
+
+#widget_searchDiv {
+	width: calc(100% - 43px);
+}
+
+.dijitTextBox {
+	border: none !important;
+	padding: 0px 0px 0px 4px;
+}
+
+.dijitArrowButton {
+	height: 30px !important;
+	width: 30px;
+	display: none;
+}
+
+.dijitMenuItemHover, .dijitMenuItemSelected, .dijitComboBoxHighlightMatch {
+	background-image: none !important;
+	color: #ffffff !important;
+} */

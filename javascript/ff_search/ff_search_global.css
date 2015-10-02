@@ -1,0 +1,34 @@
+div.autocomplete_ff {
+  color: black;
+  font-size: 0.8em;
+  position:absolute;
+  width:250px;
+  background-color:white;
+  border:1px solid #888;
+  margin:0;
+  padding:0;
+}
+div.autocomplete_ff ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+div.autocomplete_ff ul li.selected { background-color: #89C8E1;}
+div.autocomplete_ff ul li {
+  list-style-type:none;
+  display:block;
+  margin:0;
+  padding:2px;
+  height:30px;
+  cursor:pointer;
+}
+
+.even
+{
+	background-color: #ffffff;
+}
+
+.odd
+{
+	background-color: #dddddd;
+}

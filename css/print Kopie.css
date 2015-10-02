@@ -1,0 +1,141 @@
+body, #wrapper, .mblBackground {
+	background-color:#ffffff !important;
+}
+
+
+#tools, #mobileHead, #banner, #navigation, #routing, #infoFav {
+	display:none;
+}
+
+
+.mblCarouselHeaderBar, .zoomButton, #openCloseAllInfoImg, #informationenControl, #routingControl  {
+	display:none;
+}
+
+#infoFenster, #routingFenster {
+	display:none;
+}
+
+.infoImgGal {
+	display:flex;
+	flex-flow: row nowrap;
+}
+
+.mblView.mblSwapView {
+	display:inline-block !important;
+}
+
+.mblCarouselItemImage {
+	height:250px;
+}
+
+#informationen h1 {
+ order:0;
+}
+
+#infoTitleDiv span {
+	font-weight:bold;
+	font-size:2em;
+}
+
+#wrapper {
+	flex-flow:column;
+
+}
+
+#wappen {
+	position:relative;
+	left:0cm;
+	right:0cm;
+	top:0cm;
+	width:100%;
+	text-align:center;
+	height:2cm;
+	flex-grow:0;
+}
+
+#wappen img {
+	height:1.8cm;
+	width:auto;
+	background-color:#00ff00;
+}
+
+#maparea {
+	position:relative;
+	left:auto;
+	right:auto;
+	height:15cm !important;
+	width:17cm !important;
+	flex-grow:0;
+}
+
+#infoFenster, #routingFenster {
+	display:none;
+	color:#000000;
+}
+
+#btn_printer2 {
+	display: none;
+}
+
+#routingFenster, #infoFenster {
+	page-break-before:always;
+	font-size: 0.9em;
+	width:100%;
+	flex-flow: column wrap;
+	-webkit-flex-flow: column wrap;
+	flex-direction: column wrap;
+	-webkit-flex-direction: column wrap; 
+	overflow:visivble;
+	
+}
+
+#head {
+	flex-grow:0;
+}
+
+#aktion ul {
+	display:none;
+}
+
+
+#information {
+	order:0;
+}
+#aktion {
+	order:1;
+	position:unset;
+}
+#informationenContent {
+	order:2;
+	overflow:unset;
+	flex-shrink:0;
+}
+
+.claro .dijitTitlePaneTitleOpen, .claro .dijitTitlePaneTitleFixedOpen {
+	background:none;
+	font-weight:bold;
+	border:0px;
+}
+
+.claro .dijitTitlePaneContentOuter {
+	border:0px;
+	background:none;
+}
+#aktion .dijitTitlePaneTextNode {
+	background-image:url("../framework/tabIcons.png");
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
+#Aktionen .dijitTitlePaneTextNode {
+	background-position: -21px 0px;
+}
+
+#Termin .dijitTitlePaneTextNode {
+	background-position: -21px -42px;
+}
+
+#Stellenangebot .dijitTitlePaneTextNode {
+	background-position: -21px -21px;
+}

@@ -1,0 +1,372 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale=1, user-scalable=0" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> 
+	<title>Internetstadtplan Musterstadt</title>
+	<link rel="stylesheet" href="dojo/dijit/themes/claro/claro.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/popup.css"/>
+ 
+	<link rel="stylesheet" href="css/revilak.css" media="screen" />
+
+	<link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 936px) and (min-height: 601px)" /> 
+
+	<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 935px)" />
+	<link rel="stylesheet" href="css/mitte.css" media="screen and (min-width: 469px) and (max-width: 935px)" />	
+
+	<link rel="stylesheet" href="css/mobile.css" media="screen and (max-height: 600px)" />
+	<link rel="stylesheet" href="css/mitte.css" media="screen and (min-width: 469px) and (max-height: 600px)" />	
+
+
+	<link rel="stylesheet" href="css/slim.css" media="screen and (max-height: 401px)" />
+	<link rel="stylesheet" href="css/slim.css" media="screen and (max-width: 401px)" />
+	<link rel="stylesheet" href="css/print.css" media="print" />
+		<!--link rel="stylesheet" href="css/printOverlay.css" media="print" /-->
+	<style type="text/css">
+	<!—- * { -webkit-text-size-adjust: none; } -->
+	</style>
+	
+	
+	<!--script src="js/jquery-1.11.2.min.js"  type="text/javascript"></script-->
+	<meta name="robots" content="index, follow" />
+	<meta name="generator" content="GOOgis" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="TG" />
+	<script src="phonegap.js"></script>
+	<script type="text/javascript" src="javascript/locate.js"></script>
+<!--
+
+	<script>dojoConfig = {parseOnLoad: true}
+	function toggleFullScreen() {
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) {
+      document.documentElement.msRequestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
+
+	toggleFullScreen();
+</script>
+	<script type="text/javascript" src="dojo/dojox/mobile/deviceTheme.js"
+        data-dojo-config="mblThemeFiles: ['base','Carousel','PageIndicator']"></script>
+	
+	<script src='dojo/dojo/dojo.js'></script>
+	
+	<script type="text/javascript" src="http://www.googis.de/3vapp/settings/settings.php"></script>		
+	<script type="text/javascript" src="javascript/print.js"></script>		
+
+	<script type="text/javascript" src="javascript/proj4js-combined.js"></script>	-->	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/ie_map.css"></link>
+	<![endif]-->
+<!--	<script type="text/javascript" src="javascript/browserinfo.js"></script>
+	<script type="text/javascript" src="javascript/OpenLayers.js"></script>
+	<script type="text/javascript" src="javascript/OpenStreetMap.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+	<script type="text/javascript" src="javascript/mapFunctions.js"></script>
+	<script type="text/javascript" src="javascript/popup.js"></script>
+	<script type="text/javascript" src="javascript/tool.js"></script>
+	<script type="text/javascript" src="javascript/controls.js"></script>
+	<script type="text/javascript" src="javascript/geometry.js"></script>
+	<script type="text/javascript" src="javascript/information.js"></script>
+	<script type="text/javascript" src="javascript/MySVG.js"></script>
+	<script type="text/javascript" src="javascript/main.js"></script>
+	<script type="text/javascript" src="javascript/search.js"></script>
+	<script type="text/javascript" src="javascript/windowControl.js"></script>
+	<script type="text/javascript" src="javascript/locate.js"></script>-->
+	<!--script type="text/javascript" src="javascript/photoswipe.min.js"></script>
+	<script type="text/javascript" src="javascript/photoswipe-ui-default.min.js"></script-->
+	
+<!--
+	
+	<script>
+
+var carousel1 = null;
+var store1 = null;
+var lbA = [];
+</script>
+	
+	<script>
+		
+		
+		var handleShowInMapButton = null;
+
+		
+		
+		dojo.require("dijit.layout.TabContainer");
+		dojo.require("dijit.layout.ContentPane");
+		dojo.require("dojox.widget.TitleGroup");
+		
+		require(["dojo/data/ItemFileReadStore", "dojo/on", "dojo/query", "dojo/domReady!"], function(ItemFileReadStore, on){
+ 		 	var handleTab = on(dojo.query("#aktion ul li"), "click", tabSys);
+ 		 	var handleInfoMinimize = on(dojo.query("#minimizeInfo"),"click",toggleMinimizeInfo);
+ 		 	var handleInfoClose = on(dojo.query("#closeInfo"),"click",closeInfo);
+ 		 	var handleRoutingMinimize = on(dojo.query("#minimizeRouting"),"click",toggleMinimizeRouting);
+ 		 	var handleRoutingClose = on(dojo.query("#closeRouting"),"click",function() {closeRouting(false);});
+			var handleRoutingMap = on(dojo.query("#mapRouting"),"click",function() {closeRouting(true);});
+
+ 		 	var handleMenuToggle = on(dojo.query("#btnMenu"),"click",function() {toggleMenu(false)});
+ 		 	var handleTest = on(dojo.query(".dog"),"click",openTesteintrag)
+ 		 	var handleMWClose = on(dojo.query("#btnMWClose"),"click",closeMW);
+ 		 	var handleToolToggle = on(dojo.query("#btnSettings"),"click",function() {toggleTools(false)});
+ 		 	var handleMWLine = on(dojo.query("#btnMWStrecke"),"click",startMWLine);
+ 		 	var handleMWArea = on(dojo.query("#btnMWArea"),"click",startMWArea);
+		//	var handleCloseAll = on(dojo.query("#btnMWArea"),"click",startMWArea);
+		
+				
+			
+			var handleMWCircle = on(dojo.query("#btnMWCircle"),"click",toggleCircleMode);
+			var handleMWReset = on(dojo.query("#btnMWReset"),"click",resetMeasuring);			
+ 		 	
+ 		 	var handleStartMeasure = on(dojo.query("#btn_measure"),"click",openMW);
+			
+ 		 	var handleStartRouting = on(dojo.query("#btn_route"),"click",function() {startRoutingWindow(false);});
+			var handleRoutingCar = on(dojo.query("#btnRoutCar"),"click",function(){setRoutingType('btnRoutCar')});
+			var handleRoutingWalk = on(dojo.query("#btnRoutWalk"),"click",function(){setRoutingType('btnRoutWalk')});
+			var handleRoutingBike = on(dojo.query("#btnRoutBike"),"click",function(){setRoutingType('btnRoutBike')});
+			var handleRoutingBus = on(dojo.query("#btnRoutBus"),"click",function(){setRoutingType('btnRoutBus')});
+			//var handlePrintButton = on(dojo.query("#btn_printer"),"click",startPrint);
+			//var handlePrintButton2 = on(dojo.query("#btn_printer2"),"click",startPrint);
+			var handleOCAButton = on(dojo.query("#openCloseAllInfoImg"),"click",toggleAllInfos);
+			var handleShowRoutingAfterMap = on(dojo.query("#btn_maxRouting"),"click",function() {startRoutingWindow(true);});
+			
+ 		 	var handleDateMode = on(dojo.query("#btn_meet"),"click",startDatingMode);
+ 		 	
+			var handleRoutingButton = on(dojo.query("#btnRoutStart"),"click",checkStartRouting);
+ 		 	var handleMobileSearchButton = on(dojo.query("#btnMobileSearchStart"),"click",function() {startMobileSearch(false)});
+ 		
+ 		 	
+ 		 	//navigator.splashscreen.hide();
+ 		
+ 		 	
+		});
+		
+		
+(function() {
+
+    var beforePrint = function() {
+    	alert("Bitte verwenden Sie für ein optimales Druckergebnis die Druckfunktion der Anwendung.");   
+    };
+    
+    var afterPrint = function() {
+    };
+
+    if (window.matchMedia) {
+        var mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(function(mql) {
+            if (mql.matches) {
+                beforePrint();
+            } else {
+                afterPrint();
+            }
+        });
+    }
+
+    window.onbeforeprint = beforePrint;
+    window.onafterprint = afterPrint;
+}());
+
+
+
+
+		
+		
+		function showMaps() {
+			require([ "dojo/dom", "dojo/query", "dojo/dom-class"], function(dom, query, domClass) {
+				query(".mapButton").forEach(function(node, index, nodelist){
+					domClass.add(node, "aktiv");
+				});
+			});
+		}
+		
+		function hideMaps() {
+		//	setTimeout(function() {
+				require([ "dojo/dom", "dojo/query", "dojo/dom-class"], function(dom, query, domClass) {
+					query(".mapButton").forEach(function(node, index, nodelist){
+						domClass.remove(node, "aktiv");
+					});
+				});
+		//	},500);
+		}
+		
+		function startPrint() {
+			require([ "dojo/dom", "dojo/dom-style"], function(dom, domStyle) {
+			
+		document.getElementById("printDivOverlay").style.display = "inline-flex";
+				openAllInfos();
+						newlink = document.createElement("link");
+        newlink.setAttribute("rel", "stylesheet");
+        newlink.setAttribute("type", "text/css");
+        newlink.setAttribute("href", "css/print.css");
+        newlink.setAttribute("id","printStyle");
+ 		var c = map.getCenter();
+        document.getElementsByTagName("head")[0].appendChild(newlink);
+        	var mi = dom.byId("tools");
+				if (domStyle.get(mi,"position") === "absolute") {
+					domStyle.set(mi,"display","");
+				}
+        setTimeout(function() {
+        	map.events.unregister('zoomend', map, onZoomend);
+	        map.updateSize(); 
+	        setTimeout(window.print,500);},200);
+		
+
+			
+				//window.print();			
+				
+			});
+		}
+	
+		
+		function showEye(listElement) {
+			//alert(listElement.childNodes[2].childNodes[0].src);
+		}
+		
+		
+		
+		require(["dojo/on", "dojo/_base/window", "dojo/query"], function(on, win){
+  				on(win.doc, "img.dojoxLightboxImage:click", function() {dijit.byId("dojoxLightboxDialog")._nextImage(); });
+		});
+		
+
+		
+	</script> -->
+		<base href="http://www.googis.de/3vapp/" >
+
+</head>
+
+<body class="claro" onload="">
+
+
+	<div id="wrapper">
+		<div id="head">
+			<div id="tools">
+				<div id="kartenAuswahl" onMouseover="showMaps()" onMouseout="hideMaps()">
+						<button id="map1Button" class="mapButton" type="button" onclick="setBaselayerByName('OSM',this);">OSM</button><button id="map2Button" class="mapButton" type="button" onclick="setBaselayerByName('BingLuftbild',this);">Luft</button><button id="map3Button" class="mapButton selected" type="button" onclick="setBaselayerByName('Tiles',this);">REVILAK</button><button id="mapchanger" class="mapChangeButton" type="button">&nbsp;</button>
+				</div>
+				
+					<a id="printLink" href="index.php?print=1" target="_blank" title="Drucken"><img border=0 src="framework/printer.png" id="btn_printer" title="Drucken..." /></a>
+					<img src="framework/route.png" id="btn_route" title="Routenplaner" />
+					<img src="framework/measure.png" id="btn_measure" title="Messwerkzeug" />
+				
+					<img src="framework/meet.png" id="btn_meet" title="Meeting-Point verschicken" />
+					<img src="framework/help.png" id="btn_help" title="Hilfe" />
+					<img src="framework/login.png" id="btn_login" title="Login" />	
+				
+			</div>
+			<div id="wappen">
+				<img src="img/eggenfelden.png" />
+			</div>
+			<div id="mobileHead">
+				<img src="framework/lupe_inv.png" id="btnMobileSearchStart" title="Suche starten" /><input id="mobileSuche" type=search placeholder="Suche..." /><img id="btnMenu" src="framework/menu.png" /><img id="btnSettings" src="framework/tools.png" />
+			</div>
+		</div>
+		<div id="maparea"></div>
+		<div id="banner"><img src="banner/1.gif" /></div>
+		
+
+		
+	</div>
+	<!--div id="mapprintdiv">ACHTUNG! Bitte nutzen Sie die Druckfunktion des Portals, um ein gutes Druckergebnis zu erzielen. Ihr Browser unterst&uuml;tzt die automatische Optimierung vor dem Druckvorgang nur eingeschränkt.</div-->
+		<!-- Steuerelemente -->
+	<button id="zoomInButton" class="zoomButton" type="button" onclick="zoomIn();">+</button>
+	<button id="zoomOutButton" class="zoomButton" type="button" onclick="zoomOut();">-</button>
+
+		
+		
+
+	<div id="navigation">
+		<div id="suche"><input id="searchField" type=search placeholder="Was suchen Sie..."><img src="framework/lupe.png"></div>
+		<div id="kategorien">
+		</div>
+		<div id="messWerkzeug" class="messWerkzeuge">
+			<input type="button" id="btnMWStrecke" title="Strecke" /><input type="button" id="btnMWArea" title="Fl&auml;che" /><input type="button" id="btnMWCircle" title="Umkreisringe einblenden" /><input type="button" id="btnMWReset" title="Neue Messung" /><div id="tfMWResult"></div>
+			<input type="button" id="btnMWClose" title="Messen beenden" />		
+		</div>
+	</div>
+		
+	
+	<div id="infoFenster">
+
+
+		<div id="information">
+			<div id="infoTitleDiv">
+				<div id="infoFav"><input type="button" id="favButtonInfo" /><label for="favButtonInfo">Zu Favoriten hinzuf&uuml;gen</label></div>
+				<div id="infoMap"><input type="button" id="infoMapButton" /><label for="infoMapButton">Auf Karte anzeigen</label></div>
+				<span id="FOITitelText"></span>
+			</div>
+			<div id="infoImgGal"></div>
+			<div id="informationenControl"><input type="button" id="minimizeInfo" title="Minimieren"/><input type="button" id="openCloseAllInfoImg" class="openCloseAllInfo" title="Alles aufklappen"><input type="button" id="closeInfo" title="Informationsfenster schlie&szlig;en" /></div>
+			<div id="operating"><img src="framework/loader.gif" title="Bitte einen Moment Geduld. Die Daten werden geladen."/><br />Bitte einen Moment Geduld!<br />Die Daten werden geladen.</div>
+		</div>
+
+		<div id="aktion">
+			<ul><li alt="Aktionen" class="aktion">&nbsp;</li><li alt="Termin" class="termin">&nbsp;</li><li alt="Stellenangebot" class="stelle">&nbsp;</li></ul>
+		
+			<div id="Aktionen" data-dojo-type="dijit/TitlePane" data-dojo-props="title: ''" class="inhalt invisible"></div>
+			<div id="Termin" data-dojo-type="dijit/TitlePane" data-dojo-props="title: ''" class="inhalt invisible"></div>
+			<div id="Stellenangebot" data-dojo-type="dijit/TitlePane" data-dojo-props="title: ''" class="inhalt invisible"></div>
+		</div>
+
+		<div id="informationenContent"></div>
+	</div>
+
+	
+	<div id="routingFenster">
+		<div id="routing">
+			<div id="routingTypeSelect"><input type="button" id="btnRoutCar" class="routingIcon routingCar aktiv" title="Routingmodus Auto"><input type="button" id="btnRoutWalk" class="routingIcon routingWalk" title="Routingmodus zu Fuß"><input type="button"  id="btnRoutBike" class="routingIcon routingBike"  title="Routingmodus Fahrrad"><input type="button" id="btnRoutBus" class="routingIcon routingBus" title="Routingmodus Öffentliche Verkehrsmittel"><img src="framework/printer.png" id="btn_printer2" title="Drucken..." /></div>
+			<div id="routingMapDiv"></div>
+			<div id="routingInputAreaDiv">
+			<img src='framework/lupe.png' id="btnRoutStart" style='margin:5px; float:right; position:relative; top:8px;' title='Routing starten'>
+
+				<div class="routingRow"><img src="framework/routing_start.png" style="position:relative; top:4px;"><input type="text" id="startTxtfield" class="routingTextfield" title="Startpunkt"></div>
+				<div class="routingRow"><img src="framework/routing_end.png" style="position:relative; top:4px;"><input type="text" id="destTxtfield" class="routingTextfield" title="Zielpunkt"></div>
+				<div class="routingRow"><input type="text" id="startTxtfieldCoords" style="display: none;" title="Startkoordinaten"></div>
+				<div class="routingRow"><input type="text" id="destTxtfieldCoords" style="display: none;" title="Zielkoordinaten"></div>
+			</div>
+			
+			<div id="routingControl"><input type="button" title="Minimieren" id="minimizeRouting"><input type="button" title="In Karte zeigen" id="mapRouting"><input type="button" title="Routing beenden" id="closeRouting"></div>
+		</div>
+		<div id="routingContent">
+			</div>
+		</div>
+	</div>
+	<div id="locationFenster"><input type="button" id="btn_locate" onclick="getPosition();" /></div>
+	<div id="routingMinFenster"><input type="button" id="btn_maxRouting" title="Route einblenden" value=""/></div>
+
+	<!--div id="printDivOverlay">
+		<div>
+			<img src="framework/printDIV.png" />
+			<img src="framework/spinner.gif" />
+		</div>
+	</div-->
+	
+	
+			
+
+
+</body>
+</html>

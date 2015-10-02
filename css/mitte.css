@@ -1,0 +1,34 @@
+
+
+#banner {
+	-webkit-order:3;
+	order:3;
+	text-align:center;
+	left: 0px;
+	right:0px;
+	width:468px;
+	position:absolute;
+	bottom:0px;
+	margin:auto;
+	z-index:1005;
+	height:80px;
+	background-color: #000000;
+  	border-color: #ffffff;
+  	border-style: solid;
+  	border-width: 7px 7px 0;
+  	padding: 2px;
+  	padding-bottom: 0px;
+}
+	
+	
+	
+	
+} 
+
+#banner img {
+	height:80px;
+}
+
+#maparea {
+	height:calc(100% - 80px);
+}

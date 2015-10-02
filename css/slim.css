@@ -1,0 +1,79 @@
+#head {
+	height:40px;
+}
+
+#maparea {
+	height:calc(100% - 40px);
+}
+
+#mobileSuche {
+	height:33px;
+	margin-top:4px;
+	margin-bottom:3px;
+}
+
+#mobileHead img {
+	height:33px;
+	width:33px;
+	padding:4px 10px;
+}
+
+#banner {
+	display:none;
+}
+
+
+
+#infoFenster, #routingFenster {
+	top:40px;
+	max-height:calc(100% - 40px);
+}
+
+#kategorien {
+	top:40px;
+	bottom:0px;
+	height:calc(100% - 40px);
+	overflow:auto;
+}
+
+#tools {
+	top:40px;
+}
+
+#information h1 {
+	font-size: 1em;
+	margin: 0px;
+	padding: 10px;
+	padding-right:45px !important;
+	background-color:#efefef;
+}
+
+#informationenControl #openCloseAllInfoImg {
+	display:none;
+}
+
+#messWerkzeug {
+	top: 40px !important;
+}
+
+.dijitDialog {
+    top: 40px !important;
+}
+
+
+#messWerkzeug #tfMWResult {
+	width:100px !important;
+}
+
+#locationFenster {
+	top:45px;
+}
+
+#routingMinFenster {
+	top:80px;
+}
+
+#btn_maxRouting, #btn_locate {
+	width:53px;
+	height:40px;
+}
