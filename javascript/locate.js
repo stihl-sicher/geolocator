@@ -108,7 +108,9 @@ function onLocationupdated(e) {
 
    if (navigator.geolocation) {
    		alert("GEOLOC");
-       var pos = navigator.geolocation.getCurrentPosition(success, showError);
+//       var pos = navigator.geolocation.getCurrentPosition(success, showError);
+	var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
+                                                  geolocationError);
    }
    else{
      alert("GeoLocation wird vom Browser nicht unterstützt");
@@ -117,7 +119,7 @@ function onLocationupdated(e) {
 
  }
 
- function success(pos) {
+ function geolocationSuccess(pos) {
 	
 	 var crd = pos.coords;
 	 lon = crd.longitude;
@@ -125,7 +127,7 @@ function onLocationupdated(e) {
 	 alert(lat+" "+lon);
  };
 
- function showError(error)
+ function geolocationError(error)
  {
  	var x = "";
    switch(error.code)
