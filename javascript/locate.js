@@ -108,11 +108,7 @@ function onLocationupdated(e) {
 
    if (navigator.geolocation) {
    		alert("GEOLOC");
-       var pos = navigator.geolocation.getCurrentPosition(success, showError, {
-  enableHighAccuracy: true,
-  timeout: 120000,
-  maximumAge: 120000
-});
+       var pos = navigator.geolocation.getCurrentPosition(success, showError);
    }
    else{
      alert("GeoLocation wird vom Browser nicht unterstützt");
