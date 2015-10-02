@@ -6,7 +6,7 @@
         id        = "de.tmj-digital.mot"
         version   = "1.0.0">
         
-    <name>geolocator/name>
+    <name>geolocator</name>
 
     <description>
         Test-application for map one.
