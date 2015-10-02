@@ -110,8 +110,8 @@ function onLocationupdated(e) {
    		alert("GEOLOC");
        var pos = navigator.geolocation.getCurrentPosition(success, showError, {
   enableHighAccuracy: true,
-  timeout: 30000,
-  maximumAge: 30000
+  timeout: 120000,
+  maximumAge: 120000
 });
    }
    else{
